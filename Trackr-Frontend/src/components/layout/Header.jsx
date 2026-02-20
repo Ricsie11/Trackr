@@ -17,8 +17,8 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
               {/* Intense Multi-Colored Illuminating Glow */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-cyan-400 via-fuchsia-500 to-amber-400 rounded-2xl blur-lg opacity-60 animate-pulse"></div>
-              <div className="absolute -inset-1 bg-gradient-to-bl from-indigo-500 via-emerald-400 to-rose-500 rounded-2xl blur-md opacity-40 animate-pulse delay-500"></div>
+              <div className="absolute -inset-2 bg-linear-to-tr from-cyan-400 via-fuchsia-500 to-amber-400 rounded-2xl blur-lg opacity-60 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-linear-to-bl from-indigo-500 via-emerald-400 to-rose-500 rounded-2xl blur-md opacity-40 animate-pulse delay-500"></div>
 
               <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-2xl border border-white/30 group-hover:scale-110 transition-transform duration-500">
                 <img
@@ -28,7 +28,7 @@ const Header = () => {
                 />
               </div>
             </div>
-            <span className="text-3xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-100 to-slate-400">
+            <span className="text-3xl font-display font-bold bg-clip-text text-transparent bg-linear-to-r from-white via-indigo-100 to-slate-400">
               Trackr
             </span>
           </Link>

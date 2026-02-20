@@ -9,6 +9,7 @@ import TransactionList from "./components/dashboard/TransactionList";
 import TransactionModal from "./components/dashboard/TransactionModal";
 import ProfileSettings from "./components/dashboard/ProfileSettings";
 import Footer from "./components/layout/Footer";
+import LandingPage from "./pages/LandingPage";
 
 import GlassCard from "./components/common/GlassCard";
 import { motion } from "framer-motion";
@@ -212,59 +213,13 @@ const Dashboard = () => {
   );
 };
 
-const Landing = () => (
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col items-center text-center">
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      className="relative group mb-10"
-    >
-      {/* Massive Hyper-Chromatic Pulsing Glow (8+ Colors) */}
-      <div className="absolute -inset-16 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-amber-500 rounded-full blur-[80px] opacity-50 animate-pulse"></div>
-      <div className="absolute -inset-12 bg-gradient-to-bl from-indigo-500 via-emerald-500 to-rose-500 rounded-full blur-[60px] opacity-40 animate-pulse delay-700"></div>
-      <div className="absolute -inset-8 bg-gradient-to-tr from-orange-500 via-violet-500 to-lime-500 rounded-full blur-[40px] opacity-30 animate-pulse delay-1000"></div>
-
-      <div className="relative w-40 h-40 rounded-[2.5rem] overflow-hidden border border-white/50 shadow-[0_0_50px_rgba(255,255,255,0.2)] transition-transform duration-500 hover:scale-110">
-        <img
-          src="/app-logo.png"
-          alt="Trackr App Logo"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </motion.div>
-    <motion.h1
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className="text-7xl md:text-9xl mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-500 font-display font-black tracking-tighter"
-    >
-      Master Your Money
-    </motion.h1>
-    <motion.p
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.1 }}
-      className="text-xl text-slate-400 max-w-2xl mb-12"
-    >
-      The premium, secure way to track expenses and grow your wealth.
-      Beautifully designed for the modern individual.
-    </motion.p>
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2 }}
-    >
-      <Navigate to="/dashboard" />
-    </motion.div>
-  </div>
-);
-
 function App() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<LandingPage />} />
           <Route
             path="/login"
             element={
