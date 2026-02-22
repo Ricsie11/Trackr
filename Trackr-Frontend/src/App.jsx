@@ -69,7 +69,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (token) fetchData();
-  }, [token]);
+  }, [token, API_URL]);
 
   const handleSaveTransaction = async (formData) => {
     try {
@@ -214,12 +214,14 @@ const Dashboard = () => {
 };
 
 function App() {
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen">
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <LandingPage />} />
           <Route
             path="/login"
             element={

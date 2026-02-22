@@ -51,7 +51,6 @@ const ChartsSection = ({ transactions = [] }) => {
                   data={categoryData}
                   cx="50%"
                   cy="50%"
-                  innerRadius={60}
                   outerRadius={100}
                   paddingAngle={5}
                   dataKey="value"

@@ -10,6 +10,7 @@ const SignupForm = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    first_name: "",
   });
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);

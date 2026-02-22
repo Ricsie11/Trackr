@@ -113,7 +113,7 @@ const LandingPage = () => {
 
           <motion.h1
             variants={itemVariants}
-            className="text-6xl md:text-8xl font-black tracking-tight mb-8 bg-clip-text text-transparent bg-linear-to-b from-white via-white to-slate-500 font-display leading-[1.1]"
+            className="text-6xl md:text-8xl font-black tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-500 font-display leading-[1.1]"
           >
             Wealth tracking <br />
             <span className="text-indigo-400">made effortless.</span>
